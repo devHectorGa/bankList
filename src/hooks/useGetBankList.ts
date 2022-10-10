@@ -1,12 +1,7 @@
 import {useQuery} from '@tanstack/react-query';
+import {BankListResponse} from './useGetBankList.types';
 
 const url = 'https://dev.obtenmas.com/catom/api/challenge/banks';
-type BankListResponse = {
-  bankName: string;
-  description: string;
-  age: number;
-  url: string;
-};
 
 const getAllBanksURL = () =>
   fetch(url)
